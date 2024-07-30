@@ -1,0 +1,199 @@
+---
+title: ""
+subtitle: ""
+author:
+  - name: "Jürgen Schneider"
+    email: "ju.schneider@dipf.de"
+    affiliation: "DIPF"
+    correspondence: true
+date: "`r Sys.Date()`" # inserts the date of compiling
+editor: source
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: false # true will prevent embed-resources
+format: 
+  html:
+    theme: ceruleanc
+    number-sections: true
+    fontsize: 0.85em
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    embed-resources: true # will make standalone html file
+    code-fold: true
+    code-tools: true
+    code-link: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r packages}
+#| echo: false
+#| eval: true
+
+library(rio)
+library(tidyverse)
+library(lavaan)
+library(brms)
+```
+
+
+```{r import}
+df <- rio::import("data/n9412_Rotation3_Datensatz_JGO.sav")
+
+```
+
+# Hypotheses
+As preregistered on [aspredicted.org/JX3_XDW](https://aspredicted.org/JX3_XDW), our Hypotheses were:
+
+1a: No relation of teachers' practical experience in school with their inquiry habit of mind.  
+1b: No relation of teachers' transfer beliefs of theory and practice with their inquiry habit of mind.  
+  
+2a: The higher teachers' application of knowledge and skills, the higher teachers' inquiry habit of mind.  
+2b: The higher teachers' selection beliefs of theory and practice, the higher teachers' inquiry habit of mind.  
+2c: The higher teachers' enrichment beliefs of theory and practice, the higher teachers' inquiry habit of mind.  
+  
+*Exploratory:*  
+3a: The higher the teachers' metareflective stance, the higher teachers' inquiry habit of mind.  
+3b: The higher teachers' relationing beliefs of theory and practice, the higher teachers' inquiry habit of mind.
+
+
+
+metareflective stance  
+application of knowledge and skills
+
+# Measurement Models
+
+## Inquiry Habit of Mind
+
+```{r}
+model_ihom <- '
+              InquiryHabit =~ f3_1 + f3_2 + f3_3 + f3_4 + f3_5 + f3_6 + f3_7 + f3_8
+              '
+
+fit_ihom <- lavaan::cfa(model_ihom, data = df, std.lv = TRUE)
+summary(fit_ihom, fit.measures = TRUE, standardized = TRUE)
+lambdas_ihom <- parameterEstimates(fit_ihom)[1:8, "est"]   # Extract weights from model
+```
+
+## Beliefs: Transfer
+
+```{r}
+model_b_trans <- '
+                 transfer =~ f5_1 + f5_2 + f5_3 + f5_5
+                 '
+
+fit_b_trans <- lavaan::cfa(model_b_trans, data = df, std.lv = TRUE)
+summary(fit_b_trans, fit.measures = TRUE, standardized = TRUE)
+
+lambdas_b_trans <- parameterEstimates(fit_b_trans)[1:4, "est"]   # Extract weights from model
+```
+
+
+## Beliefs: Selection
+
+```{r}
+model_b_selec <- '
+                 selection =~ f5_6 + f5_8 + f5_9 + f5_10
+                 '
+
+fit_b_selec <- lavaan::cfa(model_b_selec, data = df, std.lv = TRUE)
+summary(fit_b_selec, fit.measures = TRUE, standardized = TRUE)
+
+lambdas_b_selec <- parameterEstimates(fit_b_selec)[1:4, "est"]   # Extract weights from model
+```
+
+## Beliefs: Enrichment
+
+```{r}
+model_b_enric <- '
+                 enrichment =~ f5_11 + f5_12 + f5_13 + f5_14
+                 '
+
+fit_b_enric <- lavaan::cfa(model_b_enric, data = df, std.lv = TRUE)
+summary(fit_b_enric, fit.measures = TRUE, standardized = TRUE)
+
+lambdas_b_enric <- parameterEstimates(fit_b_enric)[1:4, "est"]   # Extract weights from model
+```
+
+## Beliefs: Relationing
+
+```{r}
+model_b_relat <- '
+                 relationing =~ f5_16 + f5_17 + f5_18 + f5_19
+                 '
+
+fit_b_relat <- lavaan::cfa(model_b_relat, data = df, std.lv = TRUE)
+summary(fit_b_relat, fit.measures = TRUE, standardized = TRUE)
+
+lambdas_b_relat <- parameterEstimates(fit_b_relat)[1:4, "est"]   # Extract weights from model
+```
+
+
+# Factor scores
+
+
+```{r}
+df <- df |>
+  dplyr::mutate(inqiry_habit = rowMeans(data.frame(lambdas_ihom[1]*f3_1, # Use weights from model 
+                                                   lambdas_ihom[2]*f3_2, # to compute factor
+                                                   lambdas_ihom[3]*f3_3, # score according to
+                                                   lambdas_ihom[4]*f3_4, # measurement model
+                                                   lambdas_ihom[5]*f3_5, 
+                                                   lambdas_ihom[6]*f3_6, 
+                                                   lambdas_ihom[7]*f3_7, 
+                                                   lambdas_ihom[8]*f3_8), 
+                                        na.rm = TRUE),
+                beliefs_transfer = rowMeans(data.frame(lambdas_b_trans[1]*f5_1,  
+                                                       lambdas_b_trans[2]*f5_2,  
+                                                       lambdas_b_trans[3]*f5_3,  
+                                                       lambdas_b_trans[4]*f5_5),  
+                                            na.rm = TRUE), 
+                beliefs_selectio = rowMeans(data.frame(lambdas_b_selec[1]*f5_6,  
+                                                       lambdas_b_selec[2]*f5_8,  
+                                                       lambdas_b_selec[3]*f5_9,  
+                                                       lambdas_b_selec[4]*f5_10), 
+                                            na.rm = TRUE), 
+                beliefs_enrichme = rowMeans(data.frame(lambdas_b_enric[1]*f5_11, 
+                                                       lambdas_b_enric[2]*f5_12, 
+                                                       lambdas_b_enric[3]*f5_13, 
+                                                       lambdas_b_enric[4]*f5_14), 
+                                            na.rm = TRUE), 
+                beliefs_relation = rowMeans(data.frame(lambdas_b_relat[1]*f5_16, 
+                                                       lambdas_b_relat[2]*f5_17, 
+                                                       lambdas_b_relat[3]*f5_18, 
+                                                       lambdas_b_relat[4]*f5_19), 
+                                            na.rm = TRUE),
+                experience = jahre
+                )
+```
+
+
+
+
+# Analyses
+
+## H1a
+
+1a: No relation of teachers' practical experience in school with their inquiry habit of mind.  
+
+```{r}
+fit_h1a <- brm(
+  formula = inqiry_habit ~ experience,
+  data = df,
+  prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
+                coef = experience), 
+  sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
+  iter = 20000,
+  silent = 2, # spare me the messages of compiler and sampler
+  refresh = 0 # spare me the messages of compiler and sampler
+  )
+
+summary(fit_h1a)
+
+# hypothesis(fit_h1a, "abs(experience) < .1")
+hypothesis(fit_h1a, "experience = 0")
+```
+
