@@ -66,6 +66,13 @@ application of knowledge and skills
 
 # Measurement Models
 
+:::{.panel-tabset}
+
+## INFO
+
+* Click on the tabs to see the CFAs of each construct we use in the analyses below.
+* The weights of these measurement model are saved and used to compute the factor scores, similar to `lavaan::lavPredict()`
+
 ## Inquiry Habit of Mind
 
 ```{r}
@@ -131,9 +138,11 @@ summary(fit_b_relat, fit.measures = TRUE, standardized = TRUE)
 lambdas_b_relat <- parameterEstimates(fit_b_relat)[1:4, "est"]   # Extract weights from model
 ```
 
+:::
 
 # Factor scores
 
+Weights from the CFAs are used to compute factor individual factor scores.
 
 ```{r}
 df <- df |>
@@ -175,9 +184,11 @@ df <- df |>
 
 # Analyses
 
+::: {.panel-tabset}
+
 ## H1a
 
-1a: No relation of teachers' practical experience in school with their inquiry habit of mind.  
+> 1a: No relation of teachers' **practical experience** in school with their inquiry habit of mind.  
 
 ```{r}
 fit_h1a <- brm(
@@ -193,7 +204,142 @@ fit_h1a <- brm(
 
 summary(fit_h1a)
 
-# hypothesis(fit_h1a, "abs(experience) < .1")
-hypothesis(fit_h1a, "experience = 0")
+hypothesis(fit_h1a, "abs(experience) < .1")
+# hypothesis(fit_h1a, "experience = 0")
 ```
 
+## H1b
+
+> 1b: No relation of teachers' **transfer beliefs** of theory and practice with their inquiry habit of mind.  
+
+```{r}
+fit_h1b <- brm(
+  formula = inqiry_habit ~ beliefs_transfer,
+  data = df,
+  prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
+                coef = beliefs_transfer), 
+  sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
+  iter = 20000,
+  silent = 2, # spare me the messages of compiler and sampler
+  refresh = 0 # spare me the messages of compiler and sampler
+  )
+
+summary(fit_h1b)
+
+hypothesis(fit_h1b, "abs(beliefs_transfer) < .1")
+# hypothesis(fit_h1b, "experience = 0")
+```
+
+## H2a
+
+> 2a: The higher teachers' **application of knowledge and skills**, the higher teachers' inquiry habit of mind.  
+
+```{r}
+# fit_h2a <- brm(
+#   formula = inqiry_habit ~ application,
+#   data = df,
+#   prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
+#                 coef = application), 
+#   sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
+#   iter = 20000,
+#   silent = 2, # spare me the messages of compiler and sampler
+#   refresh = 0 # spare me the messages of compiler and sampler
+#   )
+# 
+# summary(fit_h2a)
+# 
+# hypothesis(fit_h2a, "application > 0")
+```
+
+
+## H2b
+
+> 2b: The higher teachers' **selection beliefs** of theory and practice, the higher teachers' inquiry habit of mind.  
+
+```{r}
+fit_h2b <- brm(
+  formula = inqiry_habit ~ beliefs_selectio,
+  data = df,
+  prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
+                coef = beliefs_selectio), 
+  sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
+  iter = 20000,
+  silent = 2, # spare me the messages of compiler and sampler
+  refresh = 0 # spare me the messages of compiler and sampler
+  )
+
+summary(fit_h2b)
+
+hypothesis(fit_h2b, "beliefs_selectio > 0")
+```
+
+
+## H2c
+
+> 2c: The higher teachers' **enrichment beliefs** of theory and practice, the higher teachers' inquiry habit of mind.   
+
+```{r}
+fit_h2c <- brm(
+  formula = inqiry_habit ~ beliefs_enrichme,
+  data = df,
+  prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
+                coef = beliefs_enrichme), 
+  sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
+  iter = 20000,
+  silent = 2, # spare me the messages of compiler and sampler
+  refresh = 0 # spare me the messages of compiler and sampler
+  )
+
+summary(fit_h2c)
+
+hypothesis(fit_h2c, "beliefs_enrichme > 0")
+```
+
+
+
+## H3a
+
+*Exploratory:*   
+> 3a: The higher the teachers' **metareflective stance**, the higher teachers' inquiry habit of mind.   
+
+```{r}
+# fit_h3a <- brm(
+#   formula = inqiry_habit ~ metareflective,
+#   data = df,
+#   prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
+#                 coef = metareflective), 
+#   sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
+#   iter = 20000,
+#   silent = 2, # spare me the messages of compiler and sampler
+#   refresh = 0 # spare me the messages of compiler and sampler
+#   )
+# 
+# summary(fit_h3a)
+# 
+# hypothesis(fit_h3a, "metareflective > 0")
+```
+
+
+## H3b
+
+*Exploratory:*   
+> 3b: The higher teachers' **relationing beliefs** of theory and practice, the higher teachers' inquiry habit of mind.
+
+```{r}
+fit_h3b <- brm(
+  formula = inqiry_habit ~ beliefs_relation,
+  data = df,
+  prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
+                coef = beliefs_relation),
+  sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
+  iter = 20000,
+  silent = 2, # spare me the messages of compiler and sampler
+  refresh = 0 # spare me the messages of compiler and sampler
+  )
+
+summary(fit_h3b)
+
+hypothesis(fit_h3b, "beliefs_relation > 0")
+```
+
+:::

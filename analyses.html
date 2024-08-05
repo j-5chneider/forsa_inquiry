@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jürgen Schneider">
-<meta name="dcterms.date" content="2024-07-30">
+<meta name="dcterms.date" content="2024-08-05">
 
 <title>analyses</title>
 <style>
@@ -3026,19 +3026,9 @@ vertical-align: -.125em;
    
   <ul>
   <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link active" data-scroll-target="#hypotheses"><span class="header-section-number">1</span> Hypotheses</a></li>
-  <li><a href="#measurement-models" id="toc-measurement-models" class="nav-link" data-scroll-target="#measurement-models"><span class="header-section-number">2</span> Measurement Models</a>
-  <ul class="collapse">
-  <li><a href="#inquiry-habit-of-mind" id="toc-inquiry-habit-of-mind" class="nav-link" data-scroll-target="#inquiry-habit-of-mind"><span class="header-section-number">2.1</span> Inquiry Habit of Mind</a></li>
-  <li><a href="#beliefs-transfer" id="toc-beliefs-transfer" class="nav-link" data-scroll-target="#beliefs-transfer"><span class="header-section-number">2.2</span> Beliefs: Transfer</a></li>
-  <li><a href="#beliefs-selection" id="toc-beliefs-selection" class="nav-link" data-scroll-target="#beliefs-selection"><span class="header-section-number">2.3</span> Beliefs: Selection</a></li>
-  <li><a href="#beliefs-enrichment" id="toc-beliefs-enrichment" class="nav-link" data-scroll-target="#beliefs-enrichment"><span class="header-section-number">2.4</span> Beliefs: Enrichment</a></li>
-  <li><a href="#beliefs-relationing" id="toc-beliefs-relationing" class="nav-link" data-scroll-target="#beliefs-relationing"><span class="header-section-number">2.5</span> Beliefs: Relationing</a></li>
-  </ul></li>
+  <li><a href="#measurement-models" id="toc-measurement-models" class="nav-link" data-scroll-target="#measurement-models"><span class="header-section-number">2</span> Measurement Models</a></li>
   <li><a href="#factor-scores" id="toc-factor-scores" class="nav-link" data-scroll-target="#factor-scores"><span class="header-section-number">3</span> Factor scores</a></li>
-  <li><a href="#analyses" id="toc-analyses" class="nav-link" data-scroll-target="#analyses"><span class="header-section-number">4</span> Analyses</a>
-  <ul class="collapse">
-  <li><a href="#h1a" id="toc-h1a" class="nav-link" data-scroll-target="#h1a"><span class="header-section-number">4.1</span> H1a</a></li>
-  </ul></li>
+  <li><a href="#analyses" id="toc-analyses" class="nav-link" data-scroll-target="#analyses"><span class="header-section-number">4</span> Analyses</a></li>
   </ul>
 </nav>
 </div>
@@ -3065,12 +3055,21 @@ vertical-align: -.125em;
 <p><em>Exploratory:</em><br>
 3a: The higher the teachers’ metareflective stance, the higher teachers’ inquiry habit of mind.<br>
 3b: The higher teachers’ relationing beliefs of theory and practice, the higher teachers’ inquiry habit of mind.</p>
-<p>metareflective stance application of knowledge and skills</p>
+<p>metareflective stance<br>
+application of knowledge and skills</p>
 </section>
 <section id="measurement-models" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Measurement Models</h1>
-<section id="inquiry-habit-of-mind" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="inquiry-habit-of-mind"><span class="header-section-number">2.1</span> Inquiry Habit of Mind</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href>INFO</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href>Inquiry Habit of Mind</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href>Beliefs: Transfer</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href>Beliefs: Selection</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href>Beliefs: Enrichment</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href>Beliefs: Relationing</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ul>
+<li>Click on the tabs to see the CFAs of each construct we use in the analyses below.</li>
+<li>The weights of these measurement model are saved and used to compute the factor scores, similar to <code>lavaan::lavPredict()</code></li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3164,9 +3163,8 @@ Variances:
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lambdas_ihom <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_ihom)[<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="beliefs-transfer" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="beliefs-transfer"><span class="header-section-number">2.2</span> Beliefs: Transfer</h2>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3252,9 +3250,8 @@ Variances:
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>lambdas_b_trans <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_trans)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="beliefs-selection" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="beliefs-selection"><span class="header-section-number">2.3</span> Beliefs: Selection</h2>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3340,9 +3337,8 @@ Variances:
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lambdas_b_selec <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_selec)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="beliefs-enrichment" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="beliefs-enrichment"><span class="header-section-number">2.4</span> Beliefs: Enrichment</h2>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3428,9 +3424,8 @@ Variances:
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>lambdas_b_enric <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_enric)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="beliefs-relationing" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="beliefs-relationing"><span class="header-section-number">2.5</span> Beliefs: Relationing</h2>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3516,10 +3511,13 @@ Variances:
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>lambdas_b_relat <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_relat)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
+</div>
+</div>
+</div>
 </section>
 <section id="factor-scores" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Factor scores</h1>
+<p>Weights from the CFAs are used to compute factor individual factor scores.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3560,9 +3558,13 @@ Variances:
 </section>
 <section id="analyses" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Analyses</h1>
-<section id="h1a" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="h1a"><span class="header-section-number">4.1</span> H1a</h2>
-<p>1a: No relation of teachers’ practical experience in school with their inquiry habit of mind.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href>H1a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href>H1b</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href>H2a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href>H2b</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href>H2c</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false" href>H3a</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false" href>H3b</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<blockquote class="blockquote">
+<p>1a: No relation of teachers’ <strong>practical experience</strong> in school with their inquiry habit of mind.</p>
+</blockquote>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3589,12 +3591,12 @@ Formula: inqiry_habit ~ experience
 
 Regression Coefficients:
            Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-Intercept      3.36      0.08     3.20     3.53 1.00    41702    31393
-experience     0.00      0.00    -0.01     0.01 1.00    42473    29914
+Intercept      3.36      0.08     3.20     3.53 1.00    42454    30073
+experience     0.00      0.00    -0.01     0.01 1.00    43650    28423
 
 Further Distributional Parameters:
       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-sigma     0.90      0.03     0.84     0.96 1.00    39999    30268
+sigma     0.90      0.03     0.84     0.96 1.00    39354    30021
 
 Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
 and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -3602,15 +3604,164 @@ scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h1a, &quot;abs(experience) &lt; .1&quot;)</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h1a, <span class="st">&quot;experience = 0&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h1a, <span class="st">&quot;abs(experience) &lt; .1&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hypothesis Tests for class b:
-        Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio Post.Prob
-1 (experience) = 0        0         0    -0.01     0.01      96.19      0.99
-  Star
-1     
+                Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
+1 (abs(experience))... &lt; 0     -0.1         0     -0.1    -0.09        Inf
+  Post.Prob Star
+1         1    *
+---
+&#39;CI&#39;: 90%-CI for one-sided and 95%-CI for two-sided hypotheses.
+&#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
+for two-sided hypotheses, the value tested against lies outside the 95%-CI.
+Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h1a, &quot;experience = 0&quot;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<blockquote class="blockquote">
+<p>1b: No relation of teachers’ <strong>transfer beliefs</strong> of theory and practice with their inquiry habit of mind.</p>
+</blockquote>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fit_h1b <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_transfer,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_transfer), </span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h1b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> Family: gaussian 
+  Links: mu = identity; sigma = identity 
+Formula: inqiry_habit ~ beliefs_transfer 
+   Data: df (Number of observations: 403) 
+  Draws: 4 chains, each with iter = 20000; warmup = 10000; thin = 1;
+         total post-warmup draws = 40000
+
+Regression Coefficients:
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept            2.47      0.11     2.26     2.68 1.00    39334    30696
+beliefs_transfer     0.47      0.05     0.37     0.57 1.00    39046    30045
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.81      0.03     0.76     0.87 1.00    38030    28965
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h1b, <span class="st">&quot;abs(beliefs_transfer) &lt; .1&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hypothesis Tests for class b:
+                Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
+1 (abs(beliefs_tran... &lt; 0     0.37      0.05     0.29     0.45          0
+  Post.Prob Star
+1         0     
+---
+&#39;CI&#39;: 90%-CI for one-sided and 95%-CI for two-sided hypotheses.
+&#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
+for two-sided hypotheses, the value tested against lies outside the 95%-CI.
+Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h1b, &quot;experience = 0&quot;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<blockquote class="blockquote">
+<p>2a: The higher teachers’ <strong>application of knowledge and skills</strong>, the higher teachers’ inquiry habit of mind.</p>
+</blockquote>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fit_h2a &lt;- brm(</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   formula = inqiry_habit ~ application,</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   data = df,</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   prior = prior(student_t(10, 0, .5), # fairly informative prior for slope</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                 coef = application), </span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   sample_prior = &#39;yes&#39;, # (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   iter = 20000,</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   silent = 2, # spare me the messages of compiler and sampler</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   refresh = 0 # spare me the messages of compiler and sampler</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   )</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co"># summary(fit_h2a)</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h2a, &quot;application &gt; 0&quot;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<blockquote class="blockquote">
+<p>2b: The higher teachers’ <strong>selection beliefs</strong> of theory and practice, the higher teachers’ inquiry habit of mind.</p>
+</blockquote>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>fit_h2b <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_selectio,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_selectio), </span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h2b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> Family: gaussian 
+  Links: mu = identity; sigma = identity 
+Formula: inqiry_habit ~ beliefs_selectio 
+   Data: df (Number of observations: 402) 
+  Draws: 4 chains, each with iter = 20000; warmup = 10000; thin = 1;
+         total post-warmup draws = 40000
+
+Regression Coefficients:
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept            3.84      0.20     3.46     4.23 1.00    39469    30032
+beliefs_selectio    -0.11      0.05    -0.20    -0.02 1.00    39185    30100
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.90      0.03     0.84     0.96 1.00    39840    29517
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h2b, <span class="st">&quot;beliefs_selectio &gt; 0&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hypothesis Tests for class b:
+              Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
+1 (beliefs_selectio) &gt; 0    -0.11      0.05    -0.19    -0.03       0.01
+  Post.Prob Star
+1      0.01     
 ---
 &#39;CI&#39;: 90%-CI for one-sided and 95%-CI for two-sided hypotheses.
 &#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
@@ -3618,9 +3769,151 @@ for two-sided hypotheses, the value tested against lies outside the 95%-CI.
 Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
 </div>
 </div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<blockquote class="blockquote">
+<p>2c: The higher teachers’ <strong>enrichment beliefs</strong> of theory and practice, the higher teachers’ inquiry habit of mind.</p>
+</blockquote>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>fit_h2c <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_enrichme,</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_enrichme), </span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h2c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> Family: gaussian 
+  Links: mu = identity; sigma = identity 
+Formula: inqiry_habit ~ beliefs_enrichme 
+   Data: df (Number of observations: 402) 
+  Draws: 4 chains, each with iter = 20000; warmup = 10000; thin = 1;
+         total post-warmup draws = 40000
+
+Regression Coefficients:
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept            1.86      0.13     1.61     2.11 1.00    42085    30253
+beliefs_enrichme     0.38      0.03     0.32     0.44 1.00    41595    29805
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.75      0.03     0.70     0.81 1.00    41002    30102
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h2c, <span class="st">&quot;beliefs_enrichme &gt; 0&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hypothesis Tests for class b:
+              Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
+1 (beliefs_enrichme) &gt; 0     0.38      0.03     0.33     0.43        Inf
+  Post.Prob Star
+1         1    *
+---
+&#39;CI&#39;: 90%-CI for one-sided and 95%-CI for two-sided hypotheses.
+&#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
+for two-sided hypotheses, the value tested against lies outside the 95%-CI.
+Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<p><em>Exploratory:</em><br>
+&gt; 3a: The higher the teachers’ <strong>metareflective stance</strong>, the higher teachers’ inquiry habit of mind.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fit_h3a &lt;- brm(</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   formula = inqiry_habit ~ metareflective,</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   data = df,</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   prior = prior(student_t(10, 0, .5), # fairly informative prior for slope</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                 coef = metareflective), </span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   sample_prior = &#39;yes&#39;, # (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   iter = 20000,</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   silent = 2, # spare me the messages of compiler and sampler</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   refresh = 0 # spare me the messages of compiler and sampler</span></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   )</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="co"># summary(fit_h3a)</span></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h3a, &quot;metareflective &gt; 0&quot;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
+<p><em>Exploratory:</em><br>
+&gt; 3b: The higher teachers’ <strong>relationing beliefs</strong> of theory and practice, the higher teachers’ inquiry habit of mind.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>fit_h3b <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_relation,</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_relation),</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h3b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> Family: gaussian 
+  Links: mu = identity; sigma = identity 
+Formula: inqiry_habit ~ beliefs_relation 
+   Data: df (Number of observations: 403) 
+  Draws: 4 chains, each with iter = 20000; warmup = 10000; thin = 1;
+         total post-warmup draws = 40000
+
+Regression Coefficients:
+                 Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept            1.23      0.15     0.94     1.52 1.00    38251    29313
+beliefs_relation     0.61      0.04     0.53     0.69 1.00    38530    28761
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.72      0.03     0.67     0.77 1.00    38306    29607
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h3b, <span class="st">&quot;beliefs_relation &gt; 0&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hypothesis Tests for class b:
+              Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
+1 (beliefs_relation) &gt; 0     0.61      0.04     0.54     0.68        Inf
+  Post.Prob Star
+1         1    *
+---
+&#39;CI&#39;: 90%-CI for one-sided and 95%-CI for two-sided hypotheses.
+&#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
+for two-sided hypotheses, the value tested against lies outside the 95%-CI.
+Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!-- -->
 
-</section>
 </section>
 
 </main>
@@ -3909,204 +4202,351 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb22" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;&quot;</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;&quot;</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: &quot;Jürgen Schneider&quot;</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">    email: &quot;ju.schneider@dipf.de&quot;</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation: &quot;DIPF&quot;</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co">    correspondence: true</span></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;`r Sys.Date()`&quot; # inserts the date of compiling</span></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> source</span></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="co">  cache: false # true will prevent embed-resources</span></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: ceruleanc</span></span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="co">    fontsize: 0.85em</span></span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 3</span></span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a><span class="co">    embed-resources: true # will make standalone html file</span></span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="co">    code-link: true</span></span>
-<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
-<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a><span class="co">  chunk_output_type: console</span></span>
-<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r packages}</span></span>
-<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
-<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rio)</span>
-<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
-<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
-<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a><span class="in">```{r import}</span></span>
-<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">&quot;data/n9412_Rotation3_Datensatz_JGO.sav&quot;</span>)</span>
-<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a><span class="fu"># Hypotheses</span></span>
-<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>As preregistered on <span class="co">[</span><span class="ot">aspredicted.org/JX3_XDW</span><span class="co">](https://aspredicted.org/JX3_XDW)</span>, our Hypotheses were:</span>
-<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>1a: No relation of teachers&#39; practical experience in school with their inquiry habit of mind.  </span>
-<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>1b: No relation of teachers&#39; transfer beliefs of theory and practice with their inquiry habit of mind.  </span>
-<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>2a: The higher teachers&#39; application of knowledge and skills, the higher teachers&#39; inquiry habit of mind.  </span>
-<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a>2b: The higher teachers&#39; selection beliefs of theory and practice, the higher teachers&#39; inquiry habit of mind.  </span>
-<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a>2c: The higher teachers&#39; enrichment beliefs of theory and practice, the higher teachers&#39; inquiry habit of mind.  </span>
-<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a>*Exploratory:*  </span>
-<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a>3a: The higher the teachers&#39; metareflective stance, the higher teachers&#39; inquiry habit of mind.  </span>
-<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a>3b: The higher teachers&#39; relationing beliefs of theory and practice, the higher teachers&#39; inquiry habit of mind.</span>
-<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a>metareflective stance  </span>
-<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a>application of knowledge and skills</span>
-<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a><span class="fu"># Measurement Models</span></span>
-<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inquiry Habit of Mind</span></span>
-<span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-73"><a href="#cb22-73" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb22-74"><a href="#cb22-74" aria-hidden="true" tabindex="-1"></a>model_ihom <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
-<span id="cb22-75"><a href="#cb22-75" aria-hidden="true" tabindex="-1"></a><span class="st">              InquiryHabit =~ f3_1 + f3_2 + f3_3 + f3_4 + f3_5 + f3_6 + f3_7 + f3_8</span></span>
-<span id="cb22-76"><a href="#cb22-76" aria-hidden="true" tabindex="-1"></a><span class="st">              &#39;</span></span>
-<span id="cb22-77"><a href="#cb22-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-78"><a href="#cb22-78" aria-hidden="true" tabindex="-1"></a>fit_ihom <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_ihom, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_ihom, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a>lambdas_ihom <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_ihom)[<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
-<span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Transfer</span></span>
-<span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a>model_b_trans <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
-<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a><span class="st">                 transfer =~ f5_1 + f5_2 + f5_3 + f5_5</span></span>
-<span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
-<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a>fit_b_trans <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_trans, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_trans, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-95"><a href="#cb22-95" aria-hidden="true" tabindex="-1"></a>lambdas_b_trans <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_trans)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
-<span id="cb22-96"><a href="#cb22-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-97"><a href="#cb22-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-98"><a href="#cb22-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-99"><a href="#cb22-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Selection</span></span>
-<span id="cb22-100"><a href="#cb22-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-103"><a href="#cb22-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb22-104"><a href="#cb22-104" aria-hidden="true" tabindex="-1"></a>model_b_selec <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
-<span id="cb22-105"><a href="#cb22-105" aria-hidden="true" tabindex="-1"></a><span class="st">                 selection =~ f5_6 + f5_8 + f5_9 + f5_10</span></span>
-<span id="cb22-106"><a href="#cb22-106" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
-<span id="cb22-107"><a href="#cb22-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-108"><a href="#cb22-108" aria-hidden="true" tabindex="-1"></a>fit_b_selec <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_selec, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-109"><a href="#cb22-109" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_selec, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-110"><a href="#cb22-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-111"><a href="#cb22-111" aria-hidden="true" tabindex="-1"></a>lambdas_b_selec <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_selec)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
-<span id="cb22-112"><a href="#cb22-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-113"><a href="#cb22-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-114"><a href="#cb22-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Enrichment</span></span>
-<span id="cb22-115"><a href="#cb22-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a>model_b_enric <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
-<span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a><span class="st">                 enrichment =~ f5_11 + f5_12 + f5_13 + f5_14</span></span>
-<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
-<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a>fit_b_enric <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_enric, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-124"><a href="#cb22-124" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_enric, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-125"><a href="#cb22-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a>lambdas_b_enric <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_enric)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
-<span id="cb22-127"><a href="#cb22-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Relationing</span></span>
-<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-133"><a href="#cb22-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb22-134"><a href="#cb22-134" aria-hidden="true" tabindex="-1"></a>model_b_relat <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
-<span id="cb22-135"><a href="#cb22-135" aria-hidden="true" tabindex="-1"></a><span class="st">                 relationing =~ f5_16 + f5_17 + f5_18 + f5_19</span></span>
-<span id="cb22-136"><a href="#cb22-136" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
-<span id="cb22-137"><a href="#cb22-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-138"><a href="#cb22-138" aria-hidden="true" tabindex="-1"></a>fit_b_relat <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_relat, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-139"><a href="#cb22-139" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_relat, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-140"><a href="#cb22-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-141"><a href="#cb22-141" aria-hidden="true" tabindex="-1"></a>lambdas_b_relat <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_relat)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
-<span id="cb22-142"><a href="#cb22-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-143"><a href="#cb22-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-144"><a href="#cb22-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-145"><a href="#cb22-145" aria-hidden="true" tabindex="-1"></a><span class="fu"># Factor scores</span></span>
-<span id="cb22-146"><a href="#cb22-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-147"><a href="#cb22-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-150"><a href="#cb22-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb22-151"><a href="#cb22-151" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
-<span id="cb22-152"><a href="#cb22-152" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">inqiry_habit =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_ihom[<span class="dv">1</span>]<span class="sc">*</span>f3_1, <span class="co"># Use weights from model </span></span>
-<span id="cb22-153"><a href="#cb22-153" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">2</span>]<span class="sc">*</span>f3_2, <span class="co"># to compute factor</span></span>
-<span id="cb22-154"><a href="#cb22-154" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">3</span>]<span class="sc">*</span>f3_3, <span class="co"># score according to</span></span>
-<span id="cb22-155"><a href="#cb22-155" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">4</span>]<span class="sc">*</span>f3_4, <span class="co"># measurement model</span></span>
-<span id="cb22-156"><a href="#cb22-156" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">5</span>]<span class="sc">*</span>f3_5, </span>
-<span id="cb22-157"><a href="#cb22-157" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">6</span>]<span class="sc">*</span>f3_6, </span>
-<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">7</span>]<span class="sc">*</span>f3_7, </span>
-<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">8</span>]<span class="sc">*</span>f3_8), </span>
-<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb22-161"><a href="#cb22-161" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_transfer =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_trans[<span class="dv">1</span>]<span class="sc">*</span>f5_1,  </span>
-<span id="cb22-162"><a href="#cb22-162" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_trans[<span class="dv">2</span>]<span class="sc">*</span>f5_2,  </span>
-<span id="cb22-163"><a href="#cb22-163" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_trans[<span class="dv">3</span>]<span class="sc">*</span>f5_3,  </span>
-<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_trans[<span class="dv">4</span>]<span class="sc">*</span>f5_5),  </span>
-<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb22-166"><a href="#cb22-166" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_selectio =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_selec[<span class="dv">1</span>]<span class="sc">*</span>f5_6,  </span>
-<span id="cb22-167"><a href="#cb22-167" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_selec[<span class="dv">2</span>]<span class="sc">*</span>f5_8,  </span>
-<span id="cb22-168"><a href="#cb22-168" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_selec[<span class="dv">3</span>]<span class="sc">*</span>f5_9,  </span>
-<span id="cb22-169"><a href="#cb22-169" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_selec[<span class="dv">4</span>]<span class="sc">*</span>f5_10), </span>
-<span id="cb22-170"><a href="#cb22-170" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb22-171"><a href="#cb22-171" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_enrichme =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_enric[<span class="dv">1</span>]<span class="sc">*</span>f5_11, </span>
-<span id="cb22-172"><a href="#cb22-172" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_enric[<span class="dv">2</span>]<span class="sc">*</span>f5_12, </span>
-<span id="cb22-173"><a href="#cb22-173" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_enric[<span class="dv">3</span>]<span class="sc">*</span>f5_13, </span>
-<span id="cb22-174"><a href="#cb22-174" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_enric[<span class="dv">4</span>]<span class="sc">*</span>f5_14), </span>
-<span id="cb22-175"><a href="#cb22-175" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb22-176"><a href="#cb22-176" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_relation =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_relat[<span class="dv">1</span>]<span class="sc">*</span>f5_16, </span>
-<span id="cb22-177"><a href="#cb22-177" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_relat[<span class="dv">2</span>]<span class="sc">*</span>f5_17, </span>
-<span id="cb22-178"><a href="#cb22-178" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_relat[<span class="dv">3</span>]<span class="sc">*</span>f5_18, </span>
-<span id="cb22-179"><a href="#cb22-179" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_relat[<span class="dv">4</span>]<span class="sc">*</span>f5_19), </span>
-<span id="cb22-180"><a href="#cb22-180" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb22-181"><a href="#cb22-181" aria-hidden="true" tabindex="-1"></a>                <span class="at">experience =</span> jahre</span>
-<span id="cb22-182"><a href="#cb22-182" aria-hidden="true" tabindex="-1"></a>                )</span>
-<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-185"><a href="#cb22-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-186"><a href="#cb22-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-187"><a href="#cb22-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-188"><a href="#cb22-188" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyses</span></span>
-<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## H1a</span></span>
-<span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-192"><a href="#cb22-192" aria-hidden="true" tabindex="-1"></a>1a: No relation of teachers&#39; practical experience in school with their inquiry habit of mind.  </span>
-<span id="cb22-193"><a href="#cb22-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-196"><a href="#cb22-196" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb22-197"><a href="#cb22-197" aria-hidden="true" tabindex="-1"></a>fit_h1a <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
-<span id="cb22-198"><a href="#cb22-198" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> experience,</span>
-<span id="cb22-199"><a href="#cb22-199" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
-<span id="cb22-200"><a href="#cb22-200" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
-<span id="cb22-201"><a href="#cb22-201" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> experience), </span>
-<span id="cb22-202"><a href="#cb22-202" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
-<span id="cb22-203"><a href="#cb22-203" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
-<span id="cb22-204"><a href="#cb22-204" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
-<span id="cb22-205"><a href="#cb22-205" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
-<span id="cb22-206"><a href="#cb22-206" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-208"><a href="#cb22-208" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h1a)</span>
-<span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h1a, &quot;abs(experience) &lt; .1&quot;)</span></span>
-<span id="cb22-211"><a href="#cb22-211" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h1a, <span class="st">&quot;experience = 0&quot;</span>)</span>
-<span id="cb22-212"><a href="#cb22-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb42" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;&quot;</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;&quot;</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: &quot;Jürgen Schneider&quot;</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="co">    email: &quot;ju.schneider@dipf.de&quot;</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation: &quot;DIPF&quot;</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="co">    correspondence: true</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;`r Sys.Date()`&quot; # inserts the date of compiling</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> source</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="co">  echo: true</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="co">  cache: false # true will prevent embed-resources</span></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: ceruleanc</span></span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a><span class="co">    fontsize: 0.85em</span></span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 3</span></span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a><span class="co">    embed-resources: true # will make standalone html file</span></span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a><span class="co">    code-link: true</span></span>
+<span id="cb42-28"><a href="#cb42-28" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
+<span id="cb42-29"><a href="#cb42-29" aria-hidden="true" tabindex="-1"></a><span class="co">  chunk_output_type: console</span></span>
+<span id="cb42-30"><a href="#cb42-30" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb42-31"><a href="#cb42-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-32"><a href="#cb42-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r packages}</span></span>
+<span id="cb42-33"><a href="#cb42-33" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb42-34"><a href="#cb42-34" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
+<span id="cb42-35"><a href="#cb42-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-36"><a href="#cb42-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rio)</span>
+<span id="cb42-37"><a href="#cb42-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
+<span id="cb42-39"><a href="#cb42-39" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
+<span id="cb42-40"><a href="#cb42-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-41"><a href="#cb42-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-42"><a href="#cb42-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-43"><a href="#cb42-43" aria-hidden="true" tabindex="-1"></a><span class="in">```{r import}</span></span>
+<span id="cb42-44"><a href="#cb42-44" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="st">&quot;data/n9412_Rotation3_Datensatz_JGO.sav&quot;</span>)</span>
+<span id="cb42-45"><a href="#cb42-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-46"><a href="#cb42-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-47"><a href="#cb42-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-48"><a href="#cb42-48" aria-hidden="true" tabindex="-1"></a><span class="fu"># Hypotheses</span></span>
+<span id="cb42-49"><a href="#cb42-49" aria-hidden="true" tabindex="-1"></a>As preregistered on <span class="co">[</span><span class="ot">aspredicted.org/JX3_XDW</span><span class="co">](https://aspredicted.org/JX3_XDW)</span>, our Hypotheses were:</span>
+<span id="cb42-50"><a href="#cb42-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-51"><a href="#cb42-51" aria-hidden="true" tabindex="-1"></a>1a: No relation of teachers&#39; practical experience in school with their inquiry habit of mind.  </span>
+<span id="cb42-52"><a href="#cb42-52" aria-hidden="true" tabindex="-1"></a>1b: No relation of teachers&#39; transfer beliefs of theory and practice with their inquiry habit of mind.  </span>
+<span id="cb42-53"><a href="#cb42-53" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-54"><a href="#cb42-54" aria-hidden="true" tabindex="-1"></a>2a: The higher teachers&#39; application of knowledge and skills, the higher teachers&#39; inquiry habit of mind.  </span>
+<span id="cb42-55"><a href="#cb42-55" aria-hidden="true" tabindex="-1"></a>2b: The higher teachers&#39; selection beliefs of theory and practice, the higher teachers&#39; inquiry habit of mind.  </span>
+<span id="cb42-56"><a href="#cb42-56" aria-hidden="true" tabindex="-1"></a>2c: The higher teachers&#39; enrichment beliefs of theory and practice, the higher teachers&#39; inquiry habit of mind.  </span>
+<span id="cb42-57"><a href="#cb42-57" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-58"><a href="#cb42-58" aria-hidden="true" tabindex="-1"></a>*Exploratory:*  </span>
+<span id="cb42-59"><a href="#cb42-59" aria-hidden="true" tabindex="-1"></a>3a: The higher the teachers&#39; metareflective stance, the higher teachers&#39; inquiry habit of mind.  </span>
+<span id="cb42-60"><a href="#cb42-60" aria-hidden="true" tabindex="-1"></a>3b: The higher teachers&#39; relationing beliefs of theory and practice, the higher teachers&#39; inquiry habit of mind.</span>
+<span id="cb42-61"><a href="#cb42-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-62"><a href="#cb42-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-63"><a href="#cb42-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-64"><a href="#cb42-64" aria-hidden="true" tabindex="-1"></a>metareflective stance  </span>
+<span id="cb42-65"><a href="#cb42-65" aria-hidden="true" tabindex="-1"></a>application of knowledge and skills</span>
+<span id="cb42-66"><a href="#cb42-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-67"><a href="#cb42-67" aria-hidden="true" tabindex="-1"></a><span class="fu"># Measurement Models</span></span>
+<span id="cb42-68"><a href="#cb42-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-69"><a href="#cb42-69" aria-hidden="true" tabindex="-1"></a>:::{.panel-tabset}</span>
+<span id="cb42-70"><a href="#cb42-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-71"><a href="#cb42-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## INFO</span></span>
+<span id="cb42-72"><a href="#cb42-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-73"><a href="#cb42-73" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Click on the tabs to see the CFAs of each construct we use in the analyses below.</span>
+<span id="cb42-74"><a href="#cb42-74" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The weights of these measurement model are saved and used to compute the factor scores, similar to <span class="in">`lavaan::lavPredict()`</span></span>
+<span id="cb42-75"><a href="#cb42-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-76"><a href="#cb42-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inquiry Habit of Mind</span></span>
+<span id="cb42-77"><a href="#cb42-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-80"><a href="#cb42-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-81"><a href="#cb42-81" aria-hidden="true" tabindex="-1"></a>model_ihom <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
+<span id="cb42-82"><a href="#cb42-82" aria-hidden="true" tabindex="-1"></a><span class="st">              InquiryHabit =~ f3_1 + f3_2 + f3_3 + f3_4 + f3_5 + f3_6 + f3_7 + f3_8</span></span>
+<span id="cb42-83"><a href="#cb42-83" aria-hidden="true" tabindex="-1"></a><span class="st">              &#39;</span></span>
+<span id="cb42-84"><a href="#cb42-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-85"><a href="#cb42-85" aria-hidden="true" tabindex="-1"></a>fit_ihom <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_ihom, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-86"><a href="#cb42-86" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_ihom, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-87"><a href="#cb42-87" aria-hidden="true" tabindex="-1"></a>lambdas_ihom <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_ihom)[<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
+<span id="cb42-88"><a href="#cb42-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-89"><a href="#cb42-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-90"><a href="#cb42-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Transfer</span></span>
+<span id="cb42-91"><a href="#cb42-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-94"><a href="#cb42-94" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-95"><a href="#cb42-95" aria-hidden="true" tabindex="-1"></a>model_b_trans <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
+<span id="cb42-96"><a href="#cb42-96" aria-hidden="true" tabindex="-1"></a><span class="st">                 transfer =~ f5_1 + f5_2 + f5_3 + f5_5</span></span>
+<span id="cb42-97"><a href="#cb42-97" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
+<span id="cb42-98"><a href="#cb42-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-99"><a href="#cb42-99" aria-hidden="true" tabindex="-1"></a>fit_b_trans <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_trans, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-100"><a href="#cb42-100" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_trans, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-101"><a href="#cb42-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-102"><a href="#cb42-102" aria-hidden="true" tabindex="-1"></a>lambdas_b_trans <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_trans)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
+<span id="cb42-103"><a href="#cb42-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-104"><a href="#cb42-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-105"><a href="#cb42-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-106"><a href="#cb42-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Selection</span></span>
+<span id="cb42-107"><a href="#cb42-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-110"><a href="#cb42-110" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-111"><a href="#cb42-111" aria-hidden="true" tabindex="-1"></a>model_b_selec <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
+<span id="cb42-112"><a href="#cb42-112" aria-hidden="true" tabindex="-1"></a><span class="st">                 selection =~ f5_6 + f5_8 + f5_9 + f5_10</span></span>
+<span id="cb42-113"><a href="#cb42-113" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
+<span id="cb42-114"><a href="#cb42-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-115"><a href="#cb42-115" aria-hidden="true" tabindex="-1"></a>fit_b_selec <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_selec, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-116"><a href="#cb42-116" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_selec, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-117"><a href="#cb42-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-118"><a href="#cb42-118" aria-hidden="true" tabindex="-1"></a>lambdas_b_selec <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_selec)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
+<span id="cb42-119"><a href="#cb42-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-120"><a href="#cb42-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-121"><a href="#cb42-121" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Enrichment</span></span>
+<span id="cb42-122"><a href="#cb42-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-125"><a href="#cb42-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-126"><a href="#cb42-126" aria-hidden="true" tabindex="-1"></a>model_b_enric <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
+<span id="cb42-127"><a href="#cb42-127" aria-hidden="true" tabindex="-1"></a><span class="st">                 enrichment =~ f5_11 + f5_12 + f5_13 + f5_14</span></span>
+<span id="cb42-128"><a href="#cb42-128" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
+<span id="cb42-129"><a href="#cb42-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-130"><a href="#cb42-130" aria-hidden="true" tabindex="-1"></a>fit_b_enric <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_enric, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-131"><a href="#cb42-131" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_enric, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-132"><a href="#cb42-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-133"><a href="#cb42-133" aria-hidden="true" tabindex="-1"></a>lambdas_b_enric <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_enric)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
+<span id="cb42-134"><a href="#cb42-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-135"><a href="#cb42-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-136"><a href="#cb42-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Beliefs: Relationing</span></span>
+<span id="cb42-137"><a href="#cb42-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-140"><a href="#cb42-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-141"><a href="#cb42-141" aria-hidden="true" tabindex="-1"></a>model_b_relat <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
+<span id="cb42-142"><a href="#cb42-142" aria-hidden="true" tabindex="-1"></a><span class="st">                 relationing =~ f5_16 + f5_17 + f5_18 + f5_19</span></span>
+<span id="cb42-143"><a href="#cb42-143" aria-hidden="true" tabindex="-1"></a><span class="st">                 &#39;</span></span>
+<span id="cb42-144"><a href="#cb42-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-145"><a href="#cb42-145" aria-hidden="true" tabindex="-1"></a>fit_b_relat <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">cfa</span>(model_b_relat, <span class="at">data =</span> df, <span class="at">std.lv =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-146"><a href="#cb42-146" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_b_relat, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-147"><a href="#cb42-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-148"><a href="#cb42-148" aria-hidden="true" tabindex="-1"></a>lambdas_b_relat <span class="ot">&lt;-</span> <span class="fu">parameterEstimates</span>(fit_b_relat)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">&quot;est&quot;</span>]   <span class="co"># Extract weights from model</span></span>
+<span id="cb42-149"><a href="#cb42-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-150"><a href="#cb42-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-151"><a href="#cb42-151" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb42-152"><a href="#cb42-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-153"><a href="#cb42-153" aria-hidden="true" tabindex="-1"></a><span class="fu"># Factor scores</span></span>
+<span id="cb42-154"><a href="#cb42-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-155"><a href="#cb42-155" aria-hidden="true" tabindex="-1"></a>Weights from the CFAs are used to compute factor individual factor scores.</span>
+<span id="cb42-156"><a href="#cb42-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-159"><a href="#cb42-159" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-160"><a href="#cb42-160" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb42-161"><a href="#cb42-161" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">inqiry_habit =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_ihom[<span class="dv">1</span>]<span class="sc">*</span>f3_1, <span class="co"># Use weights from model </span></span>
+<span id="cb42-162"><a href="#cb42-162" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">2</span>]<span class="sc">*</span>f3_2, <span class="co"># to compute factor</span></span>
+<span id="cb42-163"><a href="#cb42-163" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">3</span>]<span class="sc">*</span>f3_3, <span class="co"># score according to</span></span>
+<span id="cb42-164"><a href="#cb42-164" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">4</span>]<span class="sc">*</span>f3_4, <span class="co"># measurement model</span></span>
+<span id="cb42-165"><a href="#cb42-165" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">5</span>]<span class="sc">*</span>f3_5, </span>
+<span id="cb42-166"><a href="#cb42-166" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">6</span>]<span class="sc">*</span>f3_6, </span>
+<span id="cb42-167"><a href="#cb42-167" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">7</span>]<span class="sc">*</span>f3_7, </span>
+<span id="cb42-168"><a href="#cb42-168" aria-hidden="true" tabindex="-1"></a>                                                   lambdas_ihom[<span class="dv">8</span>]<span class="sc">*</span>f3_8), </span>
+<span id="cb42-169"><a href="#cb42-169" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb42-170"><a href="#cb42-170" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_transfer =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_trans[<span class="dv">1</span>]<span class="sc">*</span>f5_1,  </span>
+<span id="cb42-171"><a href="#cb42-171" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_trans[<span class="dv">2</span>]<span class="sc">*</span>f5_2,  </span>
+<span id="cb42-172"><a href="#cb42-172" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_trans[<span class="dv">3</span>]<span class="sc">*</span>f5_3,  </span>
+<span id="cb42-173"><a href="#cb42-173" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_trans[<span class="dv">4</span>]<span class="sc">*</span>f5_5),  </span>
+<span id="cb42-174"><a href="#cb42-174" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb42-175"><a href="#cb42-175" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_selectio =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_selec[<span class="dv">1</span>]<span class="sc">*</span>f5_6,  </span>
+<span id="cb42-176"><a href="#cb42-176" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_selec[<span class="dv">2</span>]<span class="sc">*</span>f5_8,  </span>
+<span id="cb42-177"><a href="#cb42-177" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_selec[<span class="dv">3</span>]<span class="sc">*</span>f5_9,  </span>
+<span id="cb42-178"><a href="#cb42-178" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_selec[<span class="dv">4</span>]<span class="sc">*</span>f5_10), </span>
+<span id="cb42-179"><a href="#cb42-179" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb42-180"><a href="#cb42-180" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_enrichme =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_enric[<span class="dv">1</span>]<span class="sc">*</span>f5_11, </span>
+<span id="cb42-181"><a href="#cb42-181" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_enric[<span class="dv">2</span>]<span class="sc">*</span>f5_12, </span>
+<span id="cb42-182"><a href="#cb42-182" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_enric[<span class="dv">3</span>]<span class="sc">*</span>f5_13, </span>
+<span id="cb42-183"><a href="#cb42-183" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_enric[<span class="dv">4</span>]<span class="sc">*</span>f5_14), </span>
+<span id="cb42-184"><a href="#cb42-184" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb42-185"><a href="#cb42-185" aria-hidden="true" tabindex="-1"></a>                <span class="at">beliefs_relation =</span> <span class="fu">rowMeans</span>(<span class="fu">data.frame</span>(lambdas_b_relat[<span class="dv">1</span>]<span class="sc">*</span>f5_16, </span>
+<span id="cb42-186"><a href="#cb42-186" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_relat[<span class="dv">2</span>]<span class="sc">*</span>f5_17, </span>
+<span id="cb42-187"><a href="#cb42-187" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_relat[<span class="dv">3</span>]<span class="sc">*</span>f5_18, </span>
+<span id="cb42-188"><a href="#cb42-188" aria-hidden="true" tabindex="-1"></a>                                                       lambdas_b_relat[<span class="dv">4</span>]<span class="sc">*</span>f5_19), </span>
+<span id="cb42-189"><a href="#cb42-189" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb42-190"><a href="#cb42-190" aria-hidden="true" tabindex="-1"></a>                <span class="at">experience =</span> jahre</span>
+<span id="cb42-191"><a href="#cb42-191" aria-hidden="true" tabindex="-1"></a>                )</span>
+<span id="cb42-192"><a href="#cb42-192" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-193"><a href="#cb42-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-194"><a href="#cb42-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-195"><a href="#cb42-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-196"><a href="#cb42-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-197"><a href="#cb42-197" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyses</span></span>
+<span id="cb42-198"><a href="#cb42-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-199"><a href="#cb42-199" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb42-200"><a href="#cb42-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-201"><a href="#cb42-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## H1a</span></span>
+<span id="cb42-202"><a href="#cb42-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-203"><a href="#cb42-203" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 1a: No relation of teachers&#39; **practical experience** in school with their inquiry habit of mind.</span>  </span>
+<span id="cb42-204"><a href="#cb42-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-207"><a href="#cb42-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-208"><a href="#cb42-208" aria-hidden="true" tabindex="-1"></a>fit_h1a <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb42-209"><a href="#cb42-209" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> experience,</span>
+<span id="cb42-210"><a href="#cb42-210" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb42-211"><a href="#cb42-211" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb42-212"><a href="#cb42-212" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> experience), </span>
+<span id="cb42-213"><a href="#cb42-213" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb42-214"><a href="#cb42-214" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb42-215"><a href="#cb42-215" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-216"><a href="#cb42-216" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-217"><a href="#cb42-217" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb42-218"><a href="#cb42-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-219"><a href="#cb42-219" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h1a)</span>
+<span id="cb42-220"><a href="#cb42-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-221"><a href="#cb42-221" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h1a, <span class="st">&quot;abs(experience) &lt; .1&quot;</span>)</span>
+<span id="cb42-222"><a href="#cb42-222" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h1a, &quot;experience = 0&quot;)</span></span>
+<span id="cb42-223"><a href="#cb42-223" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-224"><a href="#cb42-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-225"><a href="#cb42-225" aria-hidden="true" tabindex="-1"></a><span class="fu">## H1b</span></span>
+<span id="cb42-226"><a href="#cb42-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-227"><a href="#cb42-227" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 1b: No relation of teachers&#39; **transfer beliefs** of theory and practice with their inquiry habit of mind.</span>  </span>
+<span id="cb42-228"><a href="#cb42-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-231"><a href="#cb42-231" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-232"><a href="#cb42-232" aria-hidden="true" tabindex="-1"></a>fit_h1b <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb42-233"><a href="#cb42-233" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_transfer,</span>
+<span id="cb42-234"><a href="#cb42-234" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb42-235"><a href="#cb42-235" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb42-236"><a href="#cb42-236" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_transfer), </span>
+<span id="cb42-237"><a href="#cb42-237" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb42-238"><a href="#cb42-238" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb42-239"><a href="#cb42-239" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-240"><a href="#cb42-240" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-241"><a href="#cb42-241" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb42-242"><a href="#cb42-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-243"><a href="#cb42-243" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h1b)</span>
+<span id="cb42-244"><a href="#cb42-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-245"><a href="#cb42-245" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h1b, <span class="st">&quot;abs(beliefs_transfer) &lt; .1&quot;</span>)</span>
+<span id="cb42-246"><a href="#cb42-246" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h1b, &quot;experience = 0&quot;)</span></span>
+<span id="cb42-247"><a href="#cb42-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-248"><a href="#cb42-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-249"><a href="#cb42-249" aria-hidden="true" tabindex="-1"></a><span class="fu">## H2a</span></span>
+<span id="cb42-250"><a href="#cb42-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-251"><a href="#cb42-251" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 2a: The higher teachers&#39; **application of knowledge and skills**, the higher teachers&#39; inquiry habit of mind.</span>  </span>
+<span id="cb42-252"><a href="#cb42-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-255"><a href="#cb42-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-256"><a href="#cb42-256" aria-hidden="true" tabindex="-1"></a><span class="co"># fit_h2a &lt;- brm(</span></span>
+<span id="cb42-257"><a href="#cb42-257" aria-hidden="true" tabindex="-1"></a><span class="co">#   formula = inqiry_habit ~ application,</span></span>
+<span id="cb42-258"><a href="#cb42-258" aria-hidden="true" tabindex="-1"></a><span class="co">#   data = df,</span></span>
+<span id="cb42-259"><a href="#cb42-259" aria-hidden="true" tabindex="-1"></a><span class="co">#   prior = prior(student_t(10, 0, .5), # fairly informative prior for slope</span></span>
+<span id="cb42-260"><a href="#cb42-260" aria-hidden="true" tabindex="-1"></a><span class="co">#                 coef = application), </span></span>
+<span id="cb42-261"><a href="#cb42-261" aria-hidden="true" tabindex="-1"></a><span class="co">#   sample_prior = &#39;yes&#39;, # (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb42-262"><a href="#cb42-262" aria-hidden="true" tabindex="-1"></a><span class="co">#   iter = 20000,</span></span>
+<span id="cb42-263"><a href="#cb42-263" aria-hidden="true" tabindex="-1"></a><span class="co">#   silent = 2, # spare me the messages of compiler and sampler</span></span>
+<span id="cb42-264"><a href="#cb42-264" aria-hidden="true" tabindex="-1"></a><span class="co">#   refresh = 0 # spare me the messages of compiler and sampler</span></span>
+<span id="cb42-265"><a href="#cb42-265" aria-hidden="true" tabindex="-1"></a><span class="co">#   )</span></span>
+<span id="cb42-266"><a href="#cb42-266" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb42-267"><a href="#cb42-267" aria-hidden="true" tabindex="-1"></a><span class="co"># summary(fit_h2a)</span></span>
+<span id="cb42-268"><a href="#cb42-268" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb42-269"><a href="#cb42-269" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h2a, &quot;application &gt; 0&quot;)</span></span>
+<span id="cb42-270"><a href="#cb42-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-271"><a href="#cb42-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-272"><a href="#cb42-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-273"><a href="#cb42-273" aria-hidden="true" tabindex="-1"></a><span class="fu">## H2b</span></span>
+<span id="cb42-274"><a href="#cb42-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-275"><a href="#cb42-275" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 2b: The higher teachers&#39; **selection beliefs** of theory and practice, the higher teachers&#39; inquiry habit of mind.</span>  </span>
+<span id="cb42-276"><a href="#cb42-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-279"><a href="#cb42-279" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-280"><a href="#cb42-280" aria-hidden="true" tabindex="-1"></a>fit_h2b <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb42-281"><a href="#cb42-281" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_selectio,</span>
+<span id="cb42-282"><a href="#cb42-282" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb42-283"><a href="#cb42-283" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb42-284"><a href="#cb42-284" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_selectio), </span>
+<span id="cb42-285"><a href="#cb42-285" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb42-286"><a href="#cb42-286" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb42-287"><a href="#cb42-287" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-288"><a href="#cb42-288" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-289"><a href="#cb42-289" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb42-290"><a href="#cb42-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-291"><a href="#cb42-291" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h2b)</span>
+<span id="cb42-292"><a href="#cb42-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-293"><a href="#cb42-293" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h2b, <span class="st">&quot;beliefs_selectio &gt; 0&quot;</span>)</span>
+<span id="cb42-294"><a href="#cb42-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-295"><a href="#cb42-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-296"><a href="#cb42-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-297"><a href="#cb42-297" aria-hidden="true" tabindex="-1"></a><span class="fu">## H2c</span></span>
+<span id="cb42-298"><a href="#cb42-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-299"><a href="#cb42-299" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 2c: The higher teachers&#39; **enrichment beliefs** of theory and practice, the higher teachers&#39; inquiry habit of mind.   </span></span>
+<span id="cb42-300"><a href="#cb42-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-303"><a href="#cb42-303" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-304"><a href="#cb42-304" aria-hidden="true" tabindex="-1"></a>fit_h2c <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb42-305"><a href="#cb42-305" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_enrichme,</span>
+<span id="cb42-306"><a href="#cb42-306" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb42-307"><a href="#cb42-307" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb42-308"><a href="#cb42-308" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_enrichme), </span>
+<span id="cb42-309"><a href="#cb42-309" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb42-310"><a href="#cb42-310" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb42-311"><a href="#cb42-311" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-312"><a href="#cb42-312" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-313"><a href="#cb42-313" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb42-314"><a href="#cb42-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-315"><a href="#cb42-315" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h2c)</span>
+<span id="cb42-316"><a href="#cb42-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-317"><a href="#cb42-317" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h2c, <span class="st">&quot;beliefs_enrichme &gt; 0&quot;</span>)</span>
+<span id="cb42-318"><a href="#cb42-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-319"><a href="#cb42-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-320"><a href="#cb42-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-321"><a href="#cb42-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-322"><a href="#cb42-322" aria-hidden="true" tabindex="-1"></a><span class="fu">## H3a</span></span>
+<span id="cb42-323"><a href="#cb42-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-324"><a href="#cb42-324" aria-hidden="true" tabindex="-1"></a>*Exploratory:*   </span>
+<span id="cb42-325"><a href="#cb42-325" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 3a: The higher the teachers&#39; **metareflective stance**, the higher teachers&#39; inquiry habit of mind.   </span></span>
+<span id="cb42-326"><a href="#cb42-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-329"><a href="#cb42-329" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-330"><a href="#cb42-330" aria-hidden="true" tabindex="-1"></a><span class="co"># fit_h3a &lt;- brm(</span></span>
+<span id="cb42-331"><a href="#cb42-331" aria-hidden="true" tabindex="-1"></a><span class="co">#   formula = inqiry_habit ~ metareflective,</span></span>
+<span id="cb42-332"><a href="#cb42-332" aria-hidden="true" tabindex="-1"></a><span class="co">#   data = df,</span></span>
+<span id="cb42-333"><a href="#cb42-333" aria-hidden="true" tabindex="-1"></a><span class="co">#   prior = prior(student_t(10, 0, .5), # fairly informative prior for slope</span></span>
+<span id="cb42-334"><a href="#cb42-334" aria-hidden="true" tabindex="-1"></a><span class="co">#                 coef = metareflective), </span></span>
+<span id="cb42-335"><a href="#cb42-335" aria-hidden="true" tabindex="-1"></a><span class="co">#   sample_prior = &#39;yes&#39;, # (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb42-336"><a href="#cb42-336" aria-hidden="true" tabindex="-1"></a><span class="co">#   iter = 20000,</span></span>
+<span id="cb42-337"><a href="#cb42-337" aria-hidden="true" tabindex="-1"></a><span class="co">#   silent = 2, # spare me the messages of compiler and sampler</span></span>
+<span id="cb42-338"><a href="#cb42-338" aria-hidden="true" tabindex="-1"></a><span class="co">#   refresh = 0 # spare me the messages of compiler and sampler</span></span>
+<span id="cb42-339"><a href="#cb42-339" aria-hidden="true" tabindex="-1"></a><span class="co">#   )</span></span>
+<span id="cb42-340"><a href="#cb42-340" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb42-341"><a href="#cb42-341" aria-hidden="true" tabindex="-1"></a><span class="co"># summary(fit_h3a)</span></span>
+<span id="cb42-342"><a href="#cb42-342" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb42-343"><a href="#cb42-343" aria-hidden="true" tabindex="-1"></a><span class="co"># hypothesis(fit_h3a, &quot;metareflective &gt; 0&quot;)</span></span>
+<span id="cb42-344"><a href="#cb42-344" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-345"><a href="#cb42-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-346"><a href="#cb42-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-347"><a href="#cb42-347" aria-hidden="true" tabindex="-1"></a><span class="fu">## H3b</span></span>
+<span id="cb42-348"><a href="#cb42-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-349"><a href="#cb42-349" aria-hidden="true" tabindex="-1"></a>*Exploratory:*   </span>
+<span id="cb42-350"><a href="#cb42-350" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 3b: The higher teachers&#39; **relationing beliefs** of theory and practice, the higher teachers&#39; inquiry habit of mind.</span></span>
+<span id="cb42-351"><a href="#cb42-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-354"><a href="#cb42-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-355"><a href="#cb42-355" aria-hidden="true" tabindex="-1"></a>fit_h3b <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb42-356"><a href="#cb42-356" aria-hidden="true" tabindex="-1"></a>  <span class="at">formula =</span> inqiry_habit <span class="sc">~</span> beliefs_relation,</span>
+<span id="cb42-357"><a href="#cb42-357" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df,</span>
+<span id="cb42-358"><a href="#cb42-358" aria-hidden="true" tabindex="-1"></a>  <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">10</span>, <span class="dv">0</span>, .<span class="dv">5</span>), <span class="co"># fairly informative prior for slope</span></span>
+<span id="cb42-359"><a href="#cb42-359" aria-hidden="true" tabindex="-1"></a>                <span class="at">coef =</span> beliefs_relation),</span>
+<span id="cb42-360"><a href="#cb42-360" aria-hidden="true" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&#39;yes&#39;</span>, <span class="co"># (necessary for calculating BFs with Savage-Dickey)</span></span>
+<span id="cb42-361"><a href="#cb42-361" aria-hidden="true" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb42-362"><a href="#cb42-362" aria-hidden="true" tabindex="-1"></a>  <span class="at">silent =</span> <span class="dv">2</span>, <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-363"><a href="#cb42-363" aria-hidden="true" tabindex="-1"></a>  <span class="at">refresh =</span> <span class="dv">0</span> <span class="co"># spare me the messages of compiler and sampler</span></span>
+<span id="cb42-364"><a href="#cb42-364" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb42-365"><a href="#cb42-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-366"><a href="#cb42-366" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit_h3b)</span>
+<span id="cb42-367"><a href="#cb42-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-368"><a href="#cb42-368" aria-hidden="true" tabindex="-1"></a><span class="fu">hypothesis</span>(fit_h3b, <span class="st">&quot;beliefs_relation &gt; 0&quot;</span>)</span>
+<span id="cb42-369"><a href="#cb42-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-370"><a href="#cb42-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-371"><a href="#cb42-371" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
