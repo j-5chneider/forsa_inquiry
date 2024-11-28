@@ -37,12 +37,41 @@ library(rio)
 library(tidyverse)
 library(lavaan)
 library(brms)
+library(semoutput)
+library(synthpop)
+library(xfun)
 ```
 
 
 ```{r import}
+# Import data
 df <- rio::import("data/n9412_Rotation3_Datensatz_JGO.sav")
 ```
+
+```{r}
+# create synthetic dataset that can be shared
+df_syn <- df %>%
+  dplyr::select(f3_1, f3_2, f3_3, f3_4, f3_5, f3_6, f3_7, f3_8, 
+                f5_1, f5_2, f5_3, f5_5, 
+                f5_6, f5_8, f5_9, f5_10, 
+                f5_11, f5_12, f5_13, f5_14, 
+                f5_16, f5_17, f5_18, f5_19, 
+                f1_1, f1_2, f1_5, f1_7, f1_10, f1_11, f1_13, 
+                f1_3, f1_6, f1_12, 
+                f1_4, f1_8, f1_9) %>%
+  synthpop::syn(print.flag = FALSE)
+
+saveRDS(df_syn$syn, file = "data/n9412_Rotation3_Datensatz_JGO_synthetic.rds")
+```
+
+
+**Open Data**  
+We can't share the original data as they are part of a larger project that is still ongoing.  
+However, we can share synthetic data created from our original data set using `synthpop`.  
+Click here to download a `r xfun::embed_file(path = "data/n9412_Rotation3_Datensatz_JGO_synthetic.rds", text = "synthetic version of the data")`.
+
+\
+\
 
 # Hypotheses
 As preregistered on [aspredicted.org/JX3_XDW](https://aspredicted.org/JX3_XDW), our Hypotheses were:
@@ -77,7 +106,9 @@ model_ihom <- '
               '
 
 fit_ihom <- lavaan::cfa(model_ihom, data = df, std.lv = TRUE)
-summary(fit_ihom, fit.measures = TRUE, standardized = TRUE)
+# summary(fit_ihom, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_ihom, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_ihom) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_ihom <- parameterEstimates(fit_ihom)[1:8, "est"]   # Extract weights from model
 ```
 
@@ -89,8 +120,9 @@ model_b_trans <- '
                  '
 
 fit_b_trans <- lavaan::cfa(model_b_trans, data = df, std.lv = TRUE)
-summary(fit_b_trans, fit.measures = TRUE, standardized = TRUE)
-
+# summary(fit_b_trans, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_b_trans, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_b_trans) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_b_trans <- parameterEstimates(fit_b_trans)[1:4, "est"]   # Extract weights from model
 ```
 
@@ -103,8 +135,9 @@ model_b_selec <- '
                  '
 
 fit_b_selec <- lavaan::cfa(model_b_selec, data = df, std.lv = TRUE)
-summary(fit_b_selec, fit.measures = TRUE, standardized = TRUE)
-
+# summary(fit_b_selec, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_b_selec, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_b_selec) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_b_selec <- parameterEstimates(fit_b_selec)[1:4, "est"]   # Extract weights from model
 ```
 
@@ -116,8 +149,9 @@ model_b_enric <- '
                  '
 
 fit_b_enric <- lavaan::cfa(model_b_enric, data = df, std.lv = TRUE)
-summary(fit_b_enric, fit.measures = TRUE, standardized = TRUE)
-
+# summary(fit_b_enric, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_b_enric, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_b_enric) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_b_enric <- parameterEstimates(fit_b_enric)[1:4, "est"]   # Extract weights from model
 ```
 
@@ -129,8 +163,9 @@ model_b_relat <- '
                  '
 
 fit_b_relat <- lavaan::cfa(model_b_relat, data = df, std.lv = TRUE)
-summary(fit_b_relat, fit.measures = TRUE, standardized = TRUE)
-
+# summary(fit_b_relat, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_b_relat, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_b_relat) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_b_relat <- parameterEstimates(fit_b_relat)[1:4, "est"]   # Extract weights from model
 ```
 
@@ -148,8 +183,9 @@ model_prof_expierience <- '
                  '
 
 fit_prof_expierience <- lavaan::cfa(model_prof_expierience, data = df, std.lv = TRUE)
-summary(fit_prof_expierience, fit.measures = TRUE, standardized = TRUE)
-
+# summary(fit_prof_expierience, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_prof_expierience, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_prof_expierience) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_prof_expierience <- parameterEstimates(fit_prof_expierience)[1:7, "est"]   # Extract weights from model
 ```
 
@@ -159,12 +195,13 @@ lambdas_prof_expierience <- parameterEstimates(fit_prof_expierience)[1:7, "est"]
 
 ```{r}
 model_prof_application <- '
-                 application =~ f1_3 + f1_6 + f1_12
+                 application =~ 1*f1_3 + f1_6 + f1_12
                  '
 
 fit_prof_application <- lavaan::cfa(model_prof_application, data = df, std.lv = TRUE)
-summary(fit_prof_application, fit.measures = TRUE, standardized = TRUE)
-
+# summary(fit_prof_application, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_prof_application, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_prof_application) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_prof_application <- parameterEstimates(fit_prof_application)[1:3, "est"]   # Extract weights from model
 ```
 
@@ -174,12 +211,13 @@ lambdas_prof_application <- parameterEstimates(fit_prof_application)[1:3, "est"]
 
 ```{r}
 model_prof_metareflect <- '
-                 relationing =~ f1_4 + f1_8 + f1_9 
+                 relationing =~ 1*f1_4 + f1_8 + f1_9 
                  '
 
 fit_prof_metareflect <- lavaan::cfa(model_prof_metareflect, data = df, std.lv = TRUE)
-summary(fit_prof_metareflect, fit.measures = TRUE, standardized = TRUE)
-
+# summary(fit_prof_metareflect, fit.measures = TRUE, standardized = TRUE)
+sem_tables(fit_prof_metareflect, rmsea_ci_level = 0.95)
+lavaan::fitted(fit_prof_metareflect) # model-implied (fitted) covariance matrix (and mean vector)
 lambdas_prof_metareflect <- parameterEstimates(fit_prof_metareflect)[1:3, "est"]   # Extract weights from model
 ```
 
@@ -254,28 +292,6 @@ df <- df |>
 
 > 1a: No relation of teachers' **practical experience** in school with their inquiry habit of mind.  
 
-
-```{r}
-set.seed(1100101)
-fit_h1a <- brm(
-  formula = inqiry_habit ~ practical_experience,
-  data = df,
-  prior = prior(student_t(10, 0, .5), # fairly informative prior for slope
-                coef = practical_experience), 
-  # sample_prior = 'yes', # (necessary for calculating BFs with Savage-Dickey)
-  iter = 20000,
-  silent = 2, # spare me the messages of compiler and sampler
-  refresh = 0 # spare me the messages of compiler and sampler
-  )
-
-summary(fit_h1a)
-
-hypothesis(fit_h1a, "abs(practical_experience) < .1")
-# hypothesis(fit_h1a, "practical_experience = 0")
-```
-
-
-** or is it the teaching profession as practical experience?**
 
 ```{r}
 set.seed(1100101)
